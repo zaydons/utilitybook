@@ -1,0 +1,187 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Contact List Styles */
+ul#contactList {
+    list-style: none;
+    padding: 0;
+}
+
+ul#contactList li {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Space out the contact info and buttons */
+    align-items: center; /* Align vertically */
+}
+
+ul#contactList li strong {
+    font-size: 1.2em;
+}
+
+ul#contactList li p {
+    margin: 5px 0;
+    color: #555;
+    flex-grow: 1; /* Ensure the text takes up available space */
+}
+
+/* Buttons Container */
+ul#contactList li .button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-start; /* Align buttons to the left */
+    gap: 5px; /* Space between stacked buttons */
+}
+
+ul#contactList li button {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Size of Font Awesome icons */
+    padding: 8px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center; /* Align icons vertically */
+}
+
+ul#contactList li button:hover {
+    background-color: #f1f1f1;
+}
+
+ul#contactList li button.deleteBtn {
+    color: #e53935;
+}
+
+ul#contactList li button.deleteBtn:hover {
+    background-color: #f44336;
+}
+
+ul#contactList li button.editBtn {
+    color: #ff9800;
+}
+
+ul#contactList li button.editBtn:hover {
+    background-color: #fb8c00;
+}
+
+/* Form wrapper around the Delete button */
+ul#contactList li form {
+    display: inline; /* Ensure the form is inline so it doesn't affect the layout */
+}
+
+/* Modal Styles */
+#editModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#editModal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+}
+
+#editModal h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#editModal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    form input {
+        padding: 8px;
+    }
+
+    form button {
+        padding: 8px;
+    }
+
+    ul#contactList li {
+        padding: 10px;
+        margin: 5px 0;
+    }
+}
